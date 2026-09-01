@@ -1,0 +1,32 @@
+services:
+  # FastAPI Backend Web Service
+  - type: web
+    name: samadhan-jharkhand-backend
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHONPATH
+        value: .
+      - key: API_V1_STR
+        value: /api/v1
+      - key: PROJECT_NAME
+        value: Samadhan Jharkhand API
+
+  # Next.js Frontend Web Service
+  - type: web
+    name: samadhan-jharkhand-frontend
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm start
+    envVars:
+      - key: NEXT_PUBLIC_API_BASE_URL
+        fromService:
+          type: web
+          name: samadhan-jharkhand-backend
+          property: url
+          suffix: /api/v1
