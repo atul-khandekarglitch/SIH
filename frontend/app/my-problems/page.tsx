@@ -42,7 +42,7 @@ export default function MyProblemsPage() {
       setLoading(false);
     }
   };
-const problems = Array.isArray(myProblems) ? myProblems : myProblems?.problems ?? [];
+const problems = Array.isArray(myProblems) ? myProblems : (myProblems as any)?.problems ?? [];
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 space-y-8">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
