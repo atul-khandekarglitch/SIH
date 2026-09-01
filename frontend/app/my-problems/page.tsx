@@ -110,6 +110,3 @@ const problems = Array.isArray(myProblems) ? myProblems : (myProblems as any)?.p
     </div>
   );
 }
-export async function generateStaticParams() {
-  return [];
-}

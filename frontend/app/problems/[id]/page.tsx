@@ -411,3 +411,6 @@ export default function ProblemDetailPage() {
     </div>
   );
 }
+export async function generateStaticParams() {
+  return [];
+}
