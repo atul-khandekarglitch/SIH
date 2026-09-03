@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 from typing import Optional
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "Samadhan Jharkhand AI Platform"
+    PROJECT_NAME: str = "Solve Bridge AI Platform"
     API_V1_STR: str = "/api/v1"
     SECRET_KEY: str = "super-secret-key-for-jharkhand-samadhan-sih-prototype-2026"
     ALGORITHM: str = "HS256"

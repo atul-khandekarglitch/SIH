@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Samadhan Jharkhand — AI Societal Problem-to-Solution Engine",
+  title: "Solve Bridge — AI Societal Problem-to-Solution Engine",
   description: "Connecting citizens reporting real-world societal problems with government departments, university R&D, and industry experts for grassroots resolution in Jharkhand.",
 };
 

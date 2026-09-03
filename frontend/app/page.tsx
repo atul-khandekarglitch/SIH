@@ -57,7 +57,7 @@ export default function LandingPage() {
             </h1>
 
             <p className="text-lg text-slate-300 leading-relaxed">
-              Samadhan Jharkhand bridges citizens with Government Departments, University R&D Labs, and Industry Innovators using AI classification, pgvector similarity detection, and intelligent routing.
+              Solve Bridge bridges citizens with Government Departments, University R&D Labs, and Industry Innovators using AI classification, pgvector similarity detection, and intelligent routing.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -128,7 +128,7 @@ export default function LandingPage() {
       {/* HOW IT WORKS END-TO-END PIPELINE */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <h2 className="text-3xl font-bold text-slate-900">How Samadhan Jharkhand Works</h2>
+          <h2 className="text-3xl font-bold text-slate-900">How Solve Bridge Works</h2>
           <p className="text-slate-600">From citizen reporting to AI analysis, multi-stakeholder R&D, and ground verification.</p>
         </div>
 

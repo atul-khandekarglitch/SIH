@@ -84,7 +84,7 @@ export default function LoginPage() {
             JH
           </div>
           <h1 className="text-2xl font-extrabold text-slate-900">
-            {isRegister ? 'Create Stakeholder Account' : 'Sign In to Samadhan'}
+            {isRegister ? 'Create Stakeholder Account' : 'Sign In to Solve Bridge'}
           </h1>
           <p className="text-xs text-slate-500">
             {isRegister ? 'Select your role to access specialized state dashboards' : 'Enter your credentials to continue'}

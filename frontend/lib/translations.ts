@@ -33,7 +33,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     sihTag: "स्मार्ट इंडिया हैकाथॉन 2026 - झारखंड राज्य नवाचार मंच"
   },
   en: {
-    title: "Samadhan Jharkhand — State Innovation Engine",
+    title: "Solve Bridge — State Innovation Engine",
     tagline: "From Community Problems to Collaborative Innovation and Real-World Impact.",
     reportProblem: "Report a Problem",
     exploreProblems: "Explore Problems",

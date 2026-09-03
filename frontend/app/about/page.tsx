@@ -10,7 +10,7 @@ export default function AboutPage() {
         <span className="bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30">
           State Innovation Framework
         </span>
-        <h1 className="text-3xl sm:text-4xl font-extrabold">About Samadhan Jharkhand</h1>
+        <h1 className="text-3xl sm:text-4xl font-extrabold">About Solve Bridge</h1>
         <p className="text-sm text-slate-300 leading-relaxed max-w-3xl">
           Jharkhand Societal Innovation Collaboration Portal connects grassroots citizen complaints directly with university R&D laboratories, industry CSR foundations, and state government departments.
         </p>

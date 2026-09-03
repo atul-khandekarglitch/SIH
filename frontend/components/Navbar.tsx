@@ -152,7 +152,7 @@ export default function Navbar() {
             </div>
             <div>
               <div className="font-bold text-slate-900 text-lg leading-tight flex items-center gap-2">
-                Samadhan Jharkhand
+                Solve Bridge
                 <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-semibold px-2 py-0.5 rounded-full border border-emerald-200">
                   AI Portal
                 </span>

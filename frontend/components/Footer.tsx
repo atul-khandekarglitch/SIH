@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 text-white font-bold text-lg mb-3">
               <div className="w-8 h-8 rounded bg-emerald-600 flex items-center justify-center text-sm">JH</div>
-              Samadhan Jharkhand
+              Solve Bridge
             </div>
             <p className="text-xs text-slate-400 leading-relaxed mb-4">
               AI-powered Societal Problem-to-Solution Collaboration Platform linking citizens, universities, industry R&D, and government departments for measurable grassroots impact across Jharkhand.
@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
-          <p>© 2026 Samadhan Jharkhand AI Platform. Built for Smart India Hackathon.</p>
+          <p>© 2026 Solve Bridge AI Platform. Built for Smart India Hackathon.</p>
           <div className="flex items-center gap-4 mt-2 sm:mt-0">
             <span>Privacy Policy</span>
             <span>Government Transparency</span>

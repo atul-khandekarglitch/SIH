@@ -13,7 +13,7 @@ services:
       - key: API_V1_STR
         value: /api/v1
       - key: PROJECT_NAME
-        value: Samadhan Jharkhand API
+        value: Solve Bridge API
 
   # Next.js Frontend Web Service
   - type: web
