@@ -17,6 +17,7 @@ async def create_new_problem(db: AsyncSession, problem_in: ProblemCreate, citize
         description=problem_in.description,
         category=problem_in.category,
         subcategory=problem_in.subcategory,
+        priority=problem_in.priority or "Medium",
         location_lat=problem_in.location_lat,
         location_lng=problem_in.location_lng,
         address=problem_in.address,
@@ -72,12 +73,15 @@ async def run_ai_analysis_pipeline(db: AsyncSession, problem_id: str) -> Problem
 
         problem.category = analysis.category
         problem.subcategory = analysis.subcategory
+        problem.priority = analysis.priority
         problem.severity = analysis.severity_score
         problem.urgency = analysis.urgency_score
         problem.public_impact = analysis.public_impact_score
         problem.ai_summary = analysis.summary
         problem.confidence_score = analysis.confidence_score
         problem.reasoning = analysis.reasoning
+        problem.department_guidance = analysis.department_guidance
+        problem.actionable_guidance = analysis.actionable_guidance
         problem.required_expertise = analysis.required_expertise
         problem.recommended_route = analysis.recommended_route
         problem.status = "ROUTING_RECOMMENDED"

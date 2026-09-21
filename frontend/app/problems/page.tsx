@@ -87,14 +87,16 @@ export default function PublicProblemsPage() {
             className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm outline-none bg-white text-slate-700 font-medium"
           >
             <option value="">All Categories</option>
-            <option value="Water">Water & Sanitation</option>
+            <option value="Road & Infrastructure">Road & Infrastructure</option>
+            <option value="Water Supply">Water Supply</option>
+            <option value="Waste Management">Waste Management</option>
+            <option value="Street Light">Street Light</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Drainage">Drainage</option>
             <option value="Healthcare">Healthcare</option>
-            <option value="Agriculture">Agriculture</option>
-            <option value="Environment">Environment</option>
-            <option value="Urban Infrastructure">Urban Infrastructure</option>
             <option value="Education">Education</option>
-            <option value="Energy">Energy</option>
-            <option value="Public Administration">Public Administration</option>
+            <option value="Public Safety">Public Safety</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 

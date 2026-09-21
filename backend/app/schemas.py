@@ -53,12 +53,19 @@ class ProblemCreate(BaseModel):
     description: str = Field(..., min_length=20)
     category: str
     subcategory: Optional[str] = None
+    priority: Optional[str] = "Medium" # Low, Medium, High, Critical
     location_lat: Optional[float] = None
     location_lng: Optional[float] = None
     address: Optional[str] = None
     district: str = "Ranchi"
     additional_info: Optional[str] = None
     images: Optional[List[str]] = []
+
+class ProblemDraftAnalyzeRequest(BaseModel):
+    title: Optional[str] = ""
+    description: str = Field(..., min_length=10)
+    category: Optional[str] = None
+    district: Optional[str] = "Ranchi"
 
 class AIAnalysisResult(BaseModel):
     summary: str
@@ -67,7 +74,10 @@ class AIAnalysisResult(BaseModel):
     severity_score: int = Field(..., ge=1, le=10)
     urgency_score: int = Field(..., ge=1, le=10)
     public_impact_score: int = Field(..., ge=1, le=10)
-    required_expertise: List[str]
+    priority: str = "Medium" # Low, Medium, High, Critical
+    department_guidance: str = "Municipal / Local Administration"
+    actionable_guidance: List[str] = []
+    required_expertise: List[str] = []
     recommended_route: str # GOVERNMENT, UNIVERSITY, INDUSTRY, COLLABORATION, EMERGENCY
     confidence_score: float
     reasoning: str
@@ -96,6 +106,7 @@ class ProblemResponse(BaseModel):
     description: str
     category: str
     subcategory: Optional[str] = None
+    priority: Optional[str] = "Medium"
     severity: int
     urgency: int
     public_impact: int
@@ -110,6 +121,8 @@ class ProblemResponse(BaseModel):
     ai_summary: Optional[str] = None
     confidence_score: Optional[float] = None
     reasoning: Optional[str] = None
+    department_guidance: Optional[str] = None
+    actionable_guidance: Optional[List[str]] = None
     required_expertise: Optional[List[str]] = None
     created_at: datetime
     updated_at: datetime

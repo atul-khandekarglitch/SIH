@@ -69,7 +69,7 @@ const problems = Array.isArray(myProblems) ? myProblems : (myProblems as any)?.p
         </div>
       ) : (
         <div className="space-y-6">
-          {Problems.map((p) => (
+          {problems.map((p: any) => (
             <div key={p.id} className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                 <span className="bg-slate-100 text-slate-800 text-xs font-bold px-2.5 py-1 rounded-md border border-slate-200">

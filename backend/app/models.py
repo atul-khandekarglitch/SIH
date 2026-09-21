@@ -58,6 +58,7 @@ class Problem(Base):
     description = Column(Text, nullable=False)
     category = Column(String(100), nullable=False)
     subcategory = Column(String(100), nullable=True)
+    priority = Column(String(50), nullable=True, default="Medium")  # Low, Medium, High, Critical
     severity = Column(Integer, default=5)  # 1 to 10
     urgency = Column(Integer, default=5)   # 1 to 10
     public_impact = Column(Integer, default=5) # 1 to 10
@@ -76,6 +77,8 @@ class Problem(Base):
     ai_summary = Column(Text, nullable=True)
     confidence_score = Column(Float, nullable=True)
     reasoning = Column(Text, nullable=True)
+    department_guidance = Column(Text, nullable=True)
+    actionable_guidance = Column(JSON, nullable=True)
     required_expertise = Column(JSON, nullable=True)
     
     created_at = Column(DateTime, default=datetime.utcnow)

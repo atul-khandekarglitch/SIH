@@ -9,14 +9,27 @@ from sqlalchemy.orm import selectinload
 
 from app.db import get_db
 from app.models import Problem, ProblemImage, ProblemAssignment, ProblemStatusHistory, Milestone, Solution, User, Organization
-from app.schemas import ProblemCreate, ProblemResponse, SimilarProblemResponse
+from app.schemas import ProblemCreate, ProblemResponse, SimilarProblemResponse, ProblemDraftAnalyzeRequest, AIAnalysisResult
 from app.api.auth import get_current_user
 from app.services.problem_service import create_new_problem, run_ai_analysis_pipeline, find_similar_problems
+from app.ai.llm_service import analyze_problem_with_llm
 
 router = APIRouter(prefix="/problems", tags=["Problems"])
 
 UPLOAD_DIR = os.path.join(os.getcwd(), "uploads")
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+@router.post("/analyze-draft", response_model=AIAnalysisResult)
+async def analyze_draft_problem(
+    draft_in: ProblemDraftAnalyzeRequest
+):
+    analysis = await analyze_problem_with_llm(
+        title=draft_in.title or "",
+        description=draft_in.description,
+        category_input=draft_in.category,
+        district=draft_in.district or "Ranchi"
+    )
+    return analysis
 
 @router.post("", response_model=ProblemResponse)
 async def create_problem(
